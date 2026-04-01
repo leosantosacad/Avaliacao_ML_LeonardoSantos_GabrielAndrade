@@ -1,9 +1,9 @@
-Tinta acrilica
-
-CODIGO:
+TINTA ACRILICA
+CÓDIGO:
 let x = [ 
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 ];
+
 let y = [
   120, 150, 130, 180, 200, 210, 190, 220, 210, 250, 300, 400,
 ];
@@ -42,17 +42,37 @@ let r2 = 1 - sqRes / sqTotal;
 console.log("Equação da reta: y = " + a.toFixed(2) + "x + " + b.toFixed(2));
 console.log("R² = " + r2.toFixed(4));
 
+//Previsões para os próximos 3 meses
+let futurosX = [13, 14, 15];
+
+console.log("\nPrevisões:");
+
+for (let i = 0; i < futurosX.length; i++) {
+  let xFuturo = futurosX[i];
+  let yPrevisto = a * xFuturo + b;
+
+  console.log(
+    "Mês " + xFuturo + ": " + yPrevisto.toFixed(2)
+  );
+}
 RESULTADO:
 Equação da reta: y = 19.09x + 89.24
 R² = 0.7985
-=== Code Execution Successful ===
-/------------------------------------------------------------------/
-Tinta Esmalte
 
+Previsões:
+Mês 13: 337.42
+Mês 14: 356.52
+Mês 15: 375.61
+
+=== Code Execution Successful ===
+/----------------------------------------------------/
+
+TINTA ESMALTE
 CÓDIGO:
 let x = [ 
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 ];
+
 let y = [
   80,100,90,120,130,140,150,160,170,180,190,200
 
@@ -92,22 +112,38 @@ let r2 = 1 - sqRes / sqTotal;
 console.log("Equação da reta: y = " + a.toFixed(2) + "x + " + b.toFixed(2));
 console.log("R² = " + r2.toFixed(4));
 
+//Previsões para os próximos 3 meses
+let futurosX = [13, 14, 15];
+
+console.log("\nPrevisões:");
+
+for (let i = 0; i < futurosX.length; i++) {
+  let xFuturo = futurosX[i];
+  let yPrevisto = a * xFuturo + b;
+
+  console.log(
+    "Mês " + xFuturo + ": " + yPrevisto.toFixed(2)
+  );
+}
 RESULTADO:
 Equação da reta: y = 10.87x + 71.82
 R² = 0.9817
 
-=== Code Execution Successful ===
-/------------------------------------------------------------------/
-Tinta Latex
+Previsões:
+Mês 13: 213.18
+Mês 14: 224.06
+Mês 15: 234.93
 
+=== Code Execution Successful ===
+/----------------------------------------------------/
+TINTA LATEX
 CÓDIGO:
 let x = [ 
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 ];
+
 let y = [
   200,210,220,230,240,250,260,270,280,290,300,310
-
-
 ];
 
 let n = x.length;
@@ -144,19 +180,36 @@ let r2 = 1 - sqRes / sqTotal;
 console.log("Equação da reta: y = " + a.toFixed(2) + "x + " + b.toFixed(2));
 console.log("R² = " + r2.toFixed(4));
 
-RESULTADO:
+//Previsões para os próximos 3 meses
+let futurosX = [13, 14, 15];
 
+console.log("\nPrevisões:");
+
+for (let i = 0; i < futurosX.length; i++) {
+  let xFuturo = futurosX[i];
+  let yPrevisto = a * xFuturo + b;
+
+  console.log(
+    "Mês " + xFuturo + ": " + yPrevisto.toFixed(2)
+  );
+}
+RESULTADO:
 Equação da reta: y = 10.00x + 190.00
 R² = 1.0000
 
-=== Code Execution Successful ===
-/------------------------------------------------------------------/
-Tinta Spray
+Previsões:
+Mês 13: 320.00
+Mês 14: 330.00
+Mês 15: 340.00
 
+=== Code Execution Successful ===
+/----------------------------------------------------/
+TINTA SPRAY
 CÓDIGO:
 let x = [ 
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 ];
+
 let y = [
   60,70,65,80,85,90,95,100,105,110,120,130
 ];
@@ -195,19 +248,38 @@ let r2 = 1 - sqRes / sqTotal;
 console.log("Equação da reta: y = " + a.toFixed(2) + "x + " + b.toFixed(2));
 console.log("R² = " + r2.toFixed(4));
 
+//Previsões para os próximos 3 meses
+let futurosX = [13, 14, 15];
+
+console.log("\nPrevisões:");
+
+for (let i = 0; i < futurosX.length; i++) {
+  let xFuturo = futurosX[i];
+  let yPrevisto = a * xFuturo + b;
+
+  console.log(
+    "Mês " + xFuturo + ": " + yPrevisto.toFixed(2)
+  );
+}
 RESULTADO:
 Equação da reta: y = 5.98x + 53.64
 R² = 0.9784
-=== Code Execution Successful ===
-/------------------------------------------------------------------/
-Tinta PVA
 
+Previsões:
+Mês 13: 131.36
+Mês 14: 137.34
+Mês 15: 143.32
+
+=== Code Execution Successful ===
+/----------------------------------------------------/
+TINTA PVA:
 CÓDIGO:
 let x = [ 
     1, 2
 ];
+
 let y = [
-  150, 160
+  150,160
 
 ];
 
@@ -245,7 +317,26 @@ let r2 = 1 - sqRes / sqTotal;
 console.log("Equação da reta: y = " + a.toFixed(2) + "x + " + b.toFixed(2));
 console.log("R² = " + r2.toFixed(4));
 
+//Previsões para os próximos 3 meses
+let futurosX = [3, 4, 5];
+
+console.log("\nPrevisões:");
+
+for (let i = 0; i < futurosX.length; i++) {
+  let xFuturo = futurosX[i];
+  let yPrevisto = a * xFuturo + b;
+
+  console.log(
+    "Mês " + xFuturo + ": " + yPrevisto.toFixed(2)
+  );
+}
 RESULTADO:
 Equação da reta: y = 10.00x + 140.00
 R² = 1.0000
+
+Previsões:
+Mês 3: 270.00
+Mês 4: 280.00
+Mês 5: 290.00
+
 === Code Execution Successful ===
