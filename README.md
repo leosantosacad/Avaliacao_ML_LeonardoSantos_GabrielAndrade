@@ -1,4 +1,5 @@
-# Avaliação ML Profº Bruno Leonardo Santos Gabriel Andrade
+# Leonardo Santos
+# Gabriel Andrade
 # Avaliação ML: Previsão de Vendas
 # Professor: Bruno | Método: Regressão Linear Simples
 
@@ -15,19 +16,46 @@ Fórmula utilizada: y = ax + b
 | Tinta Spray    | y = 5.98x + 53.64   | 0.9784 (Alta)                        |
 | Tinta PVA      | y = 10.00x + 140.00 | 1.0000 (Apenas 2 meses de histórico) |
 
-3. Previsão por Trimestre e Tendências
-Soma das vendas previstas por trimestre:
-| Produto | Tri 1 (Meses 1-3) | Tri 2 (Meses 4-6) | Tri 3 (Meses 7-9) | Tri 4 (Meses 10-12) | Tri 5 (Meses 13-15) - Futuro |
-|---|---|---|---|---|---|
-| Tinta Acrílica | 382.27 | 554.10 | 725.91 | 897.72 | 1069.55 |
-| Tinta Esmalte | 280.70 | 378.56 | 476.44 | 574.30 | 672.17 |
-| Tinta Látex | 630.00 | 720.00 | 810.00 | 900.00 | 990.00 |
-| Tinta Spray | 196.78 | 250.59 | 304.41 | 358.22 | 412.02 |
-| Tinta PVA | 310.00 | - | - | - | 840.00 |
-Conclusões da Tendência:
- * Crescimento Geral: A tendência é de alta para todos os produtos. Nenhum apresentou queda.
- * Destaques: A Tinta Acrílica tem o crescimento mais rápido (quase 20 unidades a mais por mês). A Tinta Spray é a mais lenta (aumenta cerca de 6 por mês).
- * Confiabilidade: As previsões são quase 100% seguras para a maioria das tintas, refletindo vendas muito estáveis. A exceção é a Tinta PVA, que carece de mais dados históricos para garantir essa precisão.
+## 3. Previsão e Histórico por Trimestre
+Comparativo da soma das vendas reais versus a soma das vendas previstas pelo modelo, agrupadas por trimestre.
+
+**Tinta Acrílica**
+* Tri 1 (Meses 1-3): Real = 400 | Previsto = 382.27
+* Tri 2 (Meses 4-6): Real = 590 | Previsto = 554.10
+* Tri 3 (Meses 7-9): Real = 620 | Previsto = 725.91
+* Tri 4 (Meses 10-12): Real = 950 | Previsto = 897.72
+* **Tri 5 (Meses 13-15): Futuro | Previsto = 1069.55**
+
+**Tinta Esmalte**
+* Tri 1 (Meses 1-3): Real = 270 | Previsto = 280.70
+* Tri 2 (Meses 4-6): Real = 390 | Previsto = 378.56
+* Tri 3 (Meses 7-9): Real = 480 | Previsto = 476.44
+* Tri 4 (Meses 10-12): Real = 570 | Previsto = 574.30
+* **Tri 5 (Meses 13-15): Futuro | Previsto = 672.17**
+
+**Tinta Látex**
+* Tri 1 (Meses 1-3): Real = 630 | Previsto = 630.00
+* Tri 2 (Meses 4-6): Real = 720 | Previsto = 720.00
+* Tri 3 (Meses 7-9): Real = 810 | Previsto = 810.00
+* Tri 4 (Meses 10-12): Real = 900 | Previsto = 900.00
+* **Tri 5 (Meses 13-15): Futuro | Previsto = 990.00**
+
+**Tinta Spray**
+* Tri 1 (Meses 1-3): Real = 195 | Previsto = 196.78
+* Tri 2 (Meses 4-6): Real = 255 | Previsto = 250.59
+* Tri 3 (Meses 7-9): Real = 300 | Previsto = 304.41
+* Tri 4 (Meses 10-12): Real = 360 | Previsto = 358.22
+* **Tri 5 (Meses 13-15): Futuro | Previsto = 412.02**
+
+**Tinta PVA**
+* Tri 1 (Meses 1-2): Real = 310 | Previsto = 310.00
+* *Sem dados reais para os trimestres 2, 3 e 4.*
+* **Tri 5 (Meses 13-15): Futuro | Previsto = 840.00**
+
+**Conclusões da Tendência:**
+* **Crescimento Geral:** A tendência é de alta para todos os produtos. Nenhum apresentou queda.
+* **Destaques:** A **Tinta Acrílica** tem o crescimento mais rápido (quase 20 unidades a mais por mês). A **Tinta Spray** é a mais lenta (aumenta cerca de 6 por mês).
+* **Confiabilidade:** As previsões são quase 100% seguras para a maioria das tintas, refletindo vendas muito estáveis. A exceção é a Tinta PVA, que carece de mais dados históricos para garantir essa precisão.
 
 4. Planilha de Vendas Completa
 Abaixo está o detalhamento com os dados reais e o que o modelo previu para cada mês.
