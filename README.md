@@ -1,20 +1,50 @@
 # Leonardo Santos
 # Gabriel Andrade
 # Avaliação ML: Previsão de Vendas
-# Professor: Bruno | Método: Regressão Linear Simples
+**Professor:** Bruno | **Método:** Regressão Linear Simples
 
-1. Tipo de Análise
+## 1. Tipo de Análise
 Utilizamos o Aprendizado Supervisionado. O modelo foi treinado usando o histórico passado (onde já sabíamos a quantidade vendida em cada mês) para aprender a tendência e prever os resultados dos meses futuros.
 
-2. Equações da Reta e Confiabilidade (R²)
+## 2. Equações da Reta e Confiabilidade (R²)
 Fórmula utilizada: y = ax + b
-| Produto | Equação da Reta | Confiabilidade (R²) |
-|---|---|---|
-| Tinta Acrílica | y = 19.09x + 89.24  | 0.7985 (Boa)                         |
-| Tinta Esmalte  | y = 10.87x + 71.82  | 0.9817 (Alta)                        |
-| Tinta Látex    | y = 10.00x + 190.00 | 1.0000 (Perfeita)                    |
-| Tinta Spray    | y = 5.98x + 53.64   | 0.9784 (Alta)                        |
-| Tinta PVA      | y = 10.00x + 140.00 | 1.0000 (Apenas 2 meses de histórico) |
+
+<table>
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Equação da Reta</th>
+      <th>Confiabilidade (R²)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tinta Acrílica</td>
+      <td>y = 19.09x + 89.24</td>
+      <td>0.7985 (Boa)</td>
+    </tr>
+    <tr>
+      <td>Tinta Esmalte</td>
+      <td>y = 10.87x + 71.82</td>
+      <td>0.9817 (Alta)</td>
+    </tr>
+    <tr>
+      <td>Tinta Látex</td>
+      <td>y = 10.00x + 190.00</td>
+      <td>1.0000 (Perfeita)</td>
+    </tr>
+    <tr>
+      <td>Tinta Spray</td>
+      <td>y = 5.98x + 53.64</td>
+      <td>0.9784 (Alta)</td>
+    </tr>
+    <tr>
+      <td>Tinta PVA</td>
+      <td>y = 10.00x + 140.00</td>
+      <td>1.0000 (Apenas 2 meses de histórico)</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 3. Previsão e Histórico por Trimestre
 Comparativo da soma das vendas reais versus a soma das vendas previstas pelo modelo, agrupadas por trimestre.
@@ -57,72 +87,84 @@ Comparativo da soma das vendas reais versus a soma das vendas previstas pelo mod
 * **Destaques:** A **Tinta Acrílica** tem o crescimento mais rápido (quase 20 unidades a mais por mês). A **Tinta Spray** é a mais lenta (aumenta cerca de 6 por mês).
 * **Confiabilidade:** As previsões são quase 100% seguras para a maioria das tintas, refletindo vendas muito estáveis. A exceção é a Tinta PVA, que carece de mais dados históricos para garantir essa precisão.
 
-4. Planilha de Vendas Completa
+## 4. Planilha de Vendas Completa
 Abaixo está o detalhamento com os dados reais e o que o modelo previu para cada mês.
-| Produto | Mês | Vendas reais | Vendas previstas | R² |
-|---|---|---|---|---|
-| Tinta Acrílica | 1 | 120 | 108.33 | 0.7985 |
-| Tinta Acrílica | 2 | 150 | 127.42 | 0.7985 |
-| Tinta Acrílica | 3 | 130 | 146.52 | 0.7985 |
-| Tinta Acrílica | 4 | 180 | 165.61 | 0.7985 |
-| Tinta Acrílica | 5 | 200 | 184.70 | 0.7985 |
-| Tinta Acrílica | 6 | 210 | 203.79 | 0.7985 |
-| Tinta Acrílica | 7 | 190 | 222.88 | 0.7985 |
-| Tinta Acrílica | 8 | 220 | 241.97 | 0.7985 |
-| Tinta Acrílica | 9 | 210 | 261.06 | 0.7985 |
-| Tinta Acrílica | 10 | 250 | 280.15 | 0.7985 |
-| Tinta Acrílica | 11 | 300 | 299.24 | 0.7985 |
-| Tinta Acrílica | 12 | 400 | 318.33 | 0.7985 |
-| Tinta Acrílica | 13 | - | 337.42 | 0.7985 |
-| Tinta Acrílica | 14 | - | 356.52 | 0.7985 |
-| Tinta Acrílica | 15 | - | 375.61 | 0.7985 |
-| Tinta Esmalte | 1 | 80 | 82.69 | 0.9817 |
-| Tinta Esmalte | 2 | 100 | 93.57 | 0.9817 |
-| Tinta Esmalte | 3 | 90 | 104.44 | 0.9817 |
-| Tinta Esmalte | 4 | 120 | 115.31 | 0.9817 |
-| Tinta Esmalte | 5 | 130 | 126.19 | 0.9817 |
-| Tinta Esmalte | 6 | 140 | 137.06 | 0.9817 |
-| Tinta Esmalte | 7 | 150 | 147.94 | 0.9817 |
-| Tinta Esmalte | 8 | 160 | 158.81 | 0.9817 |
-| Tinta Esmalte | 9 | 170 | 169.69 | 0.9817 |
-| Tinta Esmalte | 10 | 180 | 180.56 | 0.9817 |
-| Tinta Esmalte | 11 | 190 | 191.43 | 0.9817 |
-| Tinta Esmalte | 12 | 200 | 202.31 | 0.9817 |
-| Tinta Esmalte | 13 | - | 213.18 | 0.9817 |
-| Tinta Esmalte | 14 | - | 224.06 | 0.9817 |
-| Tinta Esmalte | 15 | - | 234.93 | 0.9817 |
-| Tinta Látex | 1 | 200 | 200.00 | 1.0000 |
-| Tinta Látex | 2 | 210 | 210.00 | 1.0000 |
-| Tinta Látex | 3 | 220 | 220.00 | 1.0000 |
-| Tinta Látex | 4 | 230 | 230.00 | 1.0000 |
-| Tinta Látex | 5 | 240 | 240.00 | 1.0000 |
-| Tinta Látex | 6 | 250 | 250.00 | 1.0000 |
-| Tinta Látex | 7 | 260 | 260.00 | 1.0000 |
-| Tinta Látex | 8 | 270 | 270.00 | 1.0000 |
-| Tinta Látex | 9 | 280 | 280.00 | 1.0000 |
-| Tinta Látex | 10 | 290 | 290.00 | 1.0000 |
-| Tinta Látex | 11 | 300 | 300.00 | 1.0000 |
-| Tinta Látex | 12 | 310 | 310.00 | 1.0000 |
-| Tinta Látex | 13 | - | 320.00 | 1.0000 |
-| Tinta Látex | 14 | - | 330.00 | 1.0000 |
-| Tinta Látex | 15 | - | 340.00 | 1.0000 |
-| Tinta Spray | 1 | 60 | 59.62 | 0.9784 |
-| Tinta Spray | 2 | 70 | 65.59 | 0.9784 |
-| Tinta Spray | 3 | 65 | 71.57 | 0.9784 |
-| Tinta Spray | 4 | 80 | 77.55 | 0.9784 |
-| Tinta Spray | 5 | 85 | 83.53 | 0.9784 |
-| Tinta Spray | 6 | 90 | 89.51 | 0.9784 |
-| Tinta Spray | 7 | 95 | 95.49 | 0.9784 |
-| Tinta Spray | 8 | 100 | 101.47 | 0.9784 |
-| Tinta Spray | 9 | 105 | 107.45 | 0.9784 |
-| Tinta Spray | 10 | 110 | 113.43 | 0.9784 |
-| Tinta Spray | 11 | 120 | 119.41 | 0.9784 |
-| Tinta Spray | 12 | 130 | 125.38 | 0.9784 |
-| Tinta Spray | 13 | - | 131.36 | 0.9784 |
-| Tinta Spray | 14 | - | 137.34 | 0.9784 |
-| Tinta Spray | 15 | - | 143.32 | 0.9784 |
-| Tinta PVA | 1 | 150 | 150.00 | 1.0000 |
-| Tinta PVA | 2 | 160 | 160.00 | 1.0000 |
-| Tinta PVA | 13 | - | 270.00 | 1.0000 |
-| Tinta PVA | 14 | - | 280.00 | 1.0000 |
-| Tinta PVA | 15 | - | 290.00 | 1.0000 |
+
+<table>
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Mês</th>
+      <th>Vendas reais</th>
+      <th>Vendas previstas</th>
+      <th>R²</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Tinta Acrílica</td><td>1</td><td>120</td><td>108.33</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>2</td><td>150</td><td>127.42</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>3</td><td>130</td><td>146.52</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>4</td><td>180</td><td>165.61</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>5</td><td>200</td><td>184.70</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>6</td><td>210</td><td>203.79</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>7</td><td>190</td><td>222.88</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>8</td><td>220</td><td>241.97</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>9</td><td>210</td><td>261.06</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>10</td><td>250</td><td>280.15</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>11</td><td>300</td><td>299.24</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>12</td><td>400</td><td>318.33</td><td>0.7985</td></tr>
+    <tr><td><strong>Tinta Acrílica</strong></td><td><strong>13</strong></td><td><strong>-</strong></td><td><strong>337.42</strong></td><td><strong>0.7985</strong></td></tr>
+    <tr><td><strong>Tinta Acrílica</strong></td><td><strong>14</strong></td><td><strong>-</strong></td><td><strong>356.52</strong></td><td><strong>0.7985</strong></td></tr>
+    <tr><td><strong>Tinta Acrílica</strong></td><td><strong>15</strong></td><td><strong>-</strong></td><td><strong>375.61</strong></td><td><strong>0.7985</strong></td></tr>
+    <tr><td>Tinta Esmalte</td><td>1</td><td>80</td><td>82.69</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>2</td><td>100</td><td>93.57</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>3</td><td>90</td><td>104.44</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>4</td><td>120</td><td>115.31</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>5</td><td>130</td><td>126.19</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>6</td><td>140</td><td>137.06</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>7</td><td>150</td><td>147.94</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>8</td><td>160</td><td>158.81</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>9</td><td>170</td><td>169.69</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>10</td><td>180</td><td>180.56</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>11</td><td>190</td><td>191.43</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>12</td><td>200</td><td>202.31</td><td>0.9817</td></tr>
+    <tr><td><strong>Tinta Esmalte</strong></td><td><strong>13</strong></td><td><strong>-</strong></td><td><strong>213.18</strong></td><td><strong>0.9817</strong></td></tr>
+    <tr><td><strong>Tinta Esmalte</strong></td><td><strong>14</strong></td><td><strong>-</strong></td><td><strong>224.06</strong></td><td><strong>0.9817</strong></td></tr>
+    <tr><td><strong>Tinta Esmalte</strong></td><td><strong>15</strong></td><td><strong>-</strong></td><td><strong>234.93</strong></td><td><strong>0.9817</strong></td></tr>
+    <tr><td>Tinta Látex</td><td>1</td><td>200</td><td>200.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>2</td><td>210</td><td>210.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>3</td><td>220</td><td>220.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>4</td><td>230</td><td>230.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>5</td><td>240</td><td>240.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>6</td><td>250</td><td>250.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>7</td><td>260</td><td>260.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>8</td><td>270</td><td>270.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>9</td><td>280</td><td>280.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>10</td><td>290</td><td>290.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>11</td><td>300</td><td>300.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>12</td><td>310</td><td>310.00</td><td>1.0000</td></tr>
+    <tr><td><strong>Tinta Látex</strong></td><td><strong>13</strong></td><td><strong>-</strong></td><td><strong>320.00</strong></td><td><strong>1.0000</strong></td></tr>
+    <tr><td><strong>Tinta Látex</strong></td><td><strong>14</strong></td><td><strong>-</strong></td><td><strong>330.00</strong></td><td><strong>1.0000</strong></td></tr>
+    <tr><td><strong>Tinta Látex</strong></td><td><strong>15</strong></td><td><strong>-</strong></td><td><strong>340.00</strong></td><td><strong>1.0000</strong></td></tr>
+    <tr><td>Tinta Spray</td><td>1</td><td>60</td><td>59.62</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>2</td><td>70</td><td>65.59</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>3</td><td>65</td><td>71.57</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>4</td><td>80</td><td>77.55</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>5</td><td>85</td><td>83.53</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>6</td><td>90</td><td>89.51</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>7</td><td>95</td><td>95.49</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>8</td><td>100</td><td>101.47</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>9</td><td>105</td><td>107.45</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>10</td><td>110</td><td>113.43</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>11</td><td>120</td><td>119.41</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>12</td><td>130</td><td>125.38</td><td>0.9784</td></tr>
+    <tr><td><strong>Tinta Spray</strong></td><td><strong>13</strong></td><td><strong>-</strong></td><td><strong>131.36</strong></td><td><strong>0.9784</strong></td></tr>
+    <tr><td><strong>Tinta Spray</strong></td><td><strong>14</strong></td><td><strong>-</strong></td><td><strong>137.34</strong></td><td><strong>0.9784</strong></td></tr>
+    <tr><td><strong>Tinta Spray</strong></td><td><strong>15</strong></td><td><strong>-</strong></td><td><strong>143.32</strong></td><td><strong>0.9784</strong></td></tr>
+    <tr><td>Tinta PVA</td><td>1</td><td>150</td><td>150.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta PVA</td><td>2</td><td>160</td><td>160.00</td><td>1.0000</td></tr>
+    <tr><td><strong>Tinta PVA</strong></td><td><strong>13</strong></td><td><strong>-</strong></td><td><strong>270.00</strong></td><td><strong>1.0000</strong></td></tr>
+    <tr><td><strong>Tinta PVA</strong></td><td><strong>14</strong></td><td><strong>-</strong></td><td><strong>280.00</strong></td><td><strong>1.0000</strong></td></tr>
+    <tr><td><strong>Tinta PVA</strong></td><td><strong>15</strong></td><td><strong>-</strong></td><td><strong>290.00</strong></td><td><strong>1.0000</strong></td></tr>
+  </tbody>
+</table>
