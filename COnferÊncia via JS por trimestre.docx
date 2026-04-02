@@ -1,0 +1,510 @@
+# Leonardo Santos
+# Gabriel Andrade
+# Avaliação ML: Previsão de Vendas
+**Professor:** Bruno | **Método:** Regressão Linear Simples
+
+## 1. Tipo de Análise
+Utilizamos o Aprendizado Supervisionado. O modelo foi treinado usando o histórico passado (onde já sabíamos a quantidade vendida em cada mês) para aprender a tendência e prever os resultados dos meses futuros.
+
+## 2. Equações da Reta e Confiabilidade (R²)
+Fórmula utilizada: y = ax + b
+
+<table>
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Equação da Reta</th>
+      <th>Confiabilidade (R²)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tinta Acrílica</td>
+      <td>y = 19.09x + 89.24</td>
+      <td>0.7985 (Boa)</td>
+    </tr>
+    <tr>
+      <td>Tinta Esmalte</td>
+      <td>y = 10.87x + 71.82</td>
+      <td>0.9817 (Alta)</td>
+    </tr>
+    <tr>
+      <td>Tinta Látex</td>
+      <td>y = 10.00x + 190.00</td>
+      <td>1.0000 (Perfeita)</td>
+    </tr>
+    <tr>
+      <td>Tinta Spray</td>
+      <td>y = 5.98x + 53.64</td>
+      <td>0.9784 (Alta)</td>
+    </tr>
+    <tr>
+      <td>Tinta PVA</td>
+      <td>y = 10.00x + 140.00</td>
+      <td>1.0000 (Apenas 2 meses de histórico)</td>
+    </tr>
+  </tbody>
+</table>
+
+## 3. Previsão e Histórico por Trimestre
+Comparativo da soma das vendas reais versus a soma das vendas previstas pelo modelo, agrupadas por trimestre.
+
+**Tinta Acrílica**
+* Tri 1 (Meses 1-3): Real = 400 | Previsto = 382.27
+* Tri 2 (Meses 4-6): Real = 590 | Previsto = 554.10
+* Tri 3 (Meses 7-9): Real = 620 | Previsto = 725.91
+* Tri 4 (Meses 10-12): Real = 950 | Previsto = 897.72
+* **Tri 5 (Meses 13-15): Futuro | Previsto = 1069.55**
+
+**Tinta Esmalte**
+* Tri 1 (Meses 1-3): Real = 270 | Previsto = 280.70
+* Tri 2 (Meses 4-6): Real = 390 | Previsto = 378.56
+* Tri 3 (Meses 7-9): Real = 480 | Previsto = 476.44
+* Tri 4 (Meses 10-12): Real = 570 | Previsto = 574.30
+* **Tri 5 (Meses 13-15): Futuro | Previsto = 672.17**
+
+**Tinta Látex**
+* Tri 1 (Meses 1-3): Real = 630 | Previsto = 630.00
+* Tri 2 (Meses 4-6): Real = 720 | Previsto = 720.00
+* Tri 3 (Meses 7-9): Real = 810 | Previsto = 810.00
+* Tri 4 (Meses 10-12): Real = 900 | Previsto = 900.00
+* **Tri 5 (Meses 13-15): Futuro | Previsto = 990.00**
+
+**Tinta Spray**
+* Tri 1 (Meses 1-3): Real = 195 | Previsto = 196.78
+* Tri 2 (Meses 4-6): Real = 255 | Previsto = 250.59
+* Tri 3 (Meses 7-9): Real = 300 | Previsto = 304.41
+* Tri 4 (Meses 10-12): Real = 360 | Previsto = 358.22
+* **Tri 5 (Meses 13-15): Futuro | Previsto = 412.02**
+
+**Tinta PVA**
+* Tri 1 (Meses 1-2): Real = 310 | Previsto = 310.00
+* *Sem dados reais para os trimestres 2, 3 e 4.*
+* **Tri 5 (Meses 13-15): Futuro | Previsto = 840.00**
+
+**Conclusões da Tendência:**
+* **Crescimento Geral:** A tendência é de alta para todos os produtos. Nenhum apresentou queda.
+* **Destaques:** A **Tinta Acrílica** tem o crescimento mais rápido (quase 20 unidades a mais por mês). A **Tinta Spray** é a mais lenta (aumenta cerca de 6 por mês).
+* **Confiabilidade:** As previsões são quase 100% seguras para a maioria das tintas, refletindo vendas muito estáveis. A exceção é a Tinta PVA, que carece de mais dados históricos para garantir essa precisão.
+
+## 4. Planilha de Vendas Completa
+Abaixo está o detalhamento com os dados reais e o que o modelo previu para cada mês.
+
+<table>
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Mês</th>
+      <th>Vendas reais</th>
+      <th>Vendas previstas</th>
+      <th>R²</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Tinta Acrílica</td><td>1</td><td>120</td><td>108.33</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>2</td><td>150</td><td>127.42</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>3</td><td>130</td><td>146.52</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>4</td><td>180</td><td>165.61</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>5</td><td>200</td><td>184.70</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>6</td><td>210</td><td>203.79</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>7</td><td>190</td><td>222.88</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>8</td><td>220</td><td>241.97</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>9</td><td>210</td><td>261.06</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>10</td><td>250</td><td>280.15</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>11</td><td>300</td><td>299.24</td><td>0.7985</td></tr>
+    <tr><td>Tinta Acrílica</td><td>12</td><td>400</td><td>318.33</td><td>0.7985</td></tr>
+    <tr><td><strong>Tinta Acrílica</strong></td><td><strong>13</strong></td><td><strong>-</strong></td><td><strong>337.42</strong></td><td><strong>0.7985</strong></td></tr>
+    <tr><td><strong>Tinta Acrílica</strong></td><td><strong>14</strong></td><td><strong>-</strong></td><td><strong>356.52</strong></td><td><strong>0.7985</strong></td></tr>
+    <tr><td><strong>Tinta Acrílica</strong></td><td><strong>15</strong></td><td><strong>-</strong></td><td><strong>375.61</strong></td><td><strong>0.7985</strong></td></tr>
+    <tr><td>Tinta Esmalte</td><td>1</td><td>80</td><td>82.69</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>2</td><td>100</td><td>93.57</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>3</td><td>90</td><td>104.44</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>4</td><td>120</td><td>115.31</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>5</td><td>130</td><td>126.19</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>6</td><td>140</td><td>137.06</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>7</td><td>150</td><td>147.94</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>8</td><td>160</td><td>158.81</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>9</td><td>170</td><td>169.69</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>10</td><td>180</td><td>180.56</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>11</td><td>190</td><td>191.43</td><td>0.9817</td></tr>
+    <tr><td>Tinta Esmalte</td><td>12</td><td>200</td><td>202.31</td><td>0.9817</td></tr>
+    <tr><td><strong>Tinta Esmalte</strong></td><td><strong>13</strong></td><td><strong>-</strong></td><td><strong>213.18</strong></td><td><strong>0.9817</strong></td></tr>
+    <tr><td><strong>Tinta Esmalte</strong></td><td><strong>14</strong></td><td><strong>-</strong></td><td><strong>224.06</strong></td><td><strong>0.9817</strong></td></tr>
+    <tr><td><strong>Tinta Esmalte</strong></td><td><strong>15</strong></td><td><strong>-</strong></td><td><strong>234.93</strong></td><td><strong>0.9817</strong></td></tr>
+    <tr><td>Tinta Látex</td><td>1</td><td>200</td><td>200.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>2</td><td>210</td><td>210.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>3</td><td>220</td><td>220.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>4</td><td>230</td><td>230.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>5</td><td>240</td><td>240.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>6</td><td>250</td><td>250.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>7</td><td>260</td><td>260.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>8</td><td>270</td><td>270.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>9</td><td>280</td><td>280.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>10</td><td>290</td><td>290.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>11</td><td>300</td><td>300.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta Látex</td><td>12</td><td>310</td><td>310.00</td><td>1.0000</td></tr>
+    <tr><td><strong>Tinta Látex</strong></td><td><strong>13</strong></td><td><strong>-</strong></td><td><strong>320.00</strong></td><td><strong>1.0000</strong></td></tr>
+    <tr><td><strong>Tinta Látex</strong></td><td><strong>14</strong></td><td><strong>-</strong></td><td><strong>330.00</strong></td><td><strong>1.0000</strong></td></tr>
+    <tr><td><strong>Tinta Látex</strong></td><td><strong>15</strong></td><td><strong>-</strong></td><td><strong>340.00</strong></td><td><strong>1.0000</strong></td></tr>
+    <tr><td>Tinta Spray</td><td>1</td><td>60</td><td>59.62</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>2</td><td>70</td><td>65.59</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>3</td><td>65</td><td>71.57</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>4</td><td>80</td><td>77.55</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>5</td><td>85</td><td>83.53</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>6</td><td>90</td><td>89.51</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>7</td><td>95</td><td>95.49</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>8</td><td>100</td><td>101.47</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>9</td><td>105</td><td>107.45</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>10</td><td>110</td><td>113.43</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>11</td><td>120</td><td>119.41</td><td>0.9784</td></tr>
+    <tr><td>Tinta Spray</td><td>12</td><td>130</td><td>125.38</td><td>0.9784</td></tr>
+    <tr><td><strong>Tinta Spray</strong></td><td><strong>13</strong></td><td><strong>-</strong></td><td><strong>131.36</strong></td><td><strong>0.9784</strong></td></tr>
+    <tr><td><strong>Tinta Spray</strong></td><td><strong>14</strong></td><td><strong>-</strong></td><td><strong>137.34</strong></td><td><strong>0.9784</strong></td></tr>
+    <tr><td><strong>Tinta Spray</strong></td><td><strong>15</strong></td><td><strong>-</strong></td><td><strong>143.32</strong></td><td><strong>0.9784</strong></td></tr>
+    <tr><td>Tinta PVA</td><td>1</td><td>150</td><td>150.00</td><td>1.0000</td></tr>
+    <tr><td>Tinta PVA</td><td>2</td><td>160</td><td>160.00</td><td>1.0000</td></tr>
+    <tr><td><strong>Tinta PVA</strong></td><td><strong>13</strong></td><td><strong>-</strong></td><td><strong>270.00</strong></td><td><strong>1.0000</strong></td></tr>
+    <tr><td><strong>Tinta PVA</strong></td><td><strong>14</strong></td><td><strong>-</strong></td><td><strong>280.00</strong></td><td><strong>1.0000</strong></td></tr>
+    <tr><td><strong>Tinta PVA</strong></td><td><strong>15</strong></td><td><strong>-</strong></td><td><strong>290.00</strong></td><td><strong>1.0000</strong></td></tr>
+  </tbody>
+</table>
+
+TINTA ACRILICA
+CÓDIGO:
+let x = [ 
+    1, 2, 3, 4
+];
+
+let y = [
+  400,590,620,950
+];
+
+let n = x.length;
+
+let somaX = 0;
+let somaY = 0;
+let somaXY = 0;
+let somaX2 = 0;
+
+for (let i = 0; i < n; i++) {
+  somaX += x[i];
+  somaY += y[i];
+  somaXY += x[i] * y[i];
+  somaX2 += x[i] * x[i];
+}
+
+let a = (n * somaXY - somaX * somaY) / (n * somaX2 - somaX * somaX);
+let b = (somaY - a * somaX) / n;
+
+let mediaY = somaY / n;
+
+let sqTotal = 0;
+let sqRes = 0;
+
+for (let i = 0; i < n; i++) {
+  let yEstimado = a * x[i] + b;
+
+  sqTotal += Math.pow(y[i] - mediaY, 2);
+  sqRes += Math.pow(y[i] - yEstimado, 2);
+}
+
+let r2 = 1 - sqRes / sqTotal;
+
+console.log("Equação da reta: y = " + a.toFixed(2) + "x + " + b.toFixed(2));
+console.log("R² = " + r2.toFixed(4));
+
+//Previsões para os próximos 3 meses
+let futurosX = [5,6,7];
+
+console.log("\nPrevisões:");
+
+for (let i = 0; i < futurosX.length; i++) {
+  let xFuturo = futurosX[i];
+  let yPrevisto = a * xFuturo + b;
+
+  console.log(
+    "Mês " + xFuturo + ": " + yPrevisto.toFixed(2)
+  );
+}
+RESULTADO:
+Equação da reta: y = 168.00x + 220.00
+R² = 0.9011
+
+Previsões:
+Mês 5: 724.00
+Mês 6: 892.00
+Mês 7: 1060.00
+
+=== Code Execution Successful ===
+/----------------------------------------------------/
+TINTA ESMALTE
+CÓDIGO:
+let x = [ 
+    1,2,3,4
+];
+
+let y = [
+ 270,390,480,570
+];
+
+let n = x.length;
+
+let somaX = 0;
+let somaY = 0;
+let somaXY = 0;
+let somaX2 = 0;
+
+for (let i = 0; i < n; i++) {
+  somaX += x[i];
+  somaY += y[i];
+  somaXY += x[i] * y[i];
+  somaX2 += x[i] * x[i];
+}
+
+let a = (n * somaXY - somaX * somaY) / (n * somaX2 - somaX * somaX);
+let b = (somaY - a * somaX) / n;
+
+let mediaY = somaY / n;
+
+let sqTotal = 0;
+let sqRes = 0;
+
+for (let i = 0; i < n; i++) {
+  let yEstimado = a * x[i] + b;
+
+  sqTotal += Math.pow(y[i] - mediaY, 2);
+  sqRes += Math.pow(y[i] - yEstimado, 2);
+}
+
+let r2 = 1 - sqRes / sqTotal;
+
+console.log("Equação da reta: y = " + a.toFixed(2) + "x + " + b.toFixed(2));
+console.log("R² = " + r2.toFixed(4));
+
+//Previsões para os próximos 3 meses
+let futurosX = [5, 6, 7];
+
+console.log("\nPrevisões:");
+
+for (let i = 0; i < futurosX.length; i++) {
+  let xFuturo = futurosX[i];
+  let yPrevisto = a * xFuturo + b;
+
+  console.log(
+    "Mês " + xFuturo + ": " + yPrevisto.toFixed(2)
+  );
+}
+RESULTADO:
+Equação da reta: y = 99.00x + 180.00
+R² = 0.9945
+
+Previsões:
+Mês 5: 1467.00
+Mês 6: 1566.00
+Mês 7: 1665.00
+
+=== Code Execution Successful ===
+/----------------------------------------------------/
+TINTA LATEX
+CÓDIGO:
+let x = [ 
+    1,2,3,4
+];
+
+let y = [
+ 630,720,810,900
+];
+
+let n = x.length;
+
+let somaX = 0;
+let somaY = 0;
+let somaXY = 0;
+let somaX2 = 0;
+
+for (let i = 0; i < n; i++) {
+  somaX += x[i];
+  somaY += y[i];
+  somaXY += x[i] * y[i];
+  somaX2 += x[i] * x[i];
+}
+
+let a = (n * somaXY - somaX * somaY) / (n * somaX2 - somaX * somaX);
+let b = (somaY - a * somaX) / n;
+
+let mediaY = somaY / n;
+
+let sqTotal = 0;
+let sqRes = 0;
+
+for (let i = 0; i < n; i++) {
+  let yEstimado = a * x[i] + b;
+
+  sqTotal += Math.pow(y[i] - mediaY, 2);
+  sqRes += Math.pow(y[i] - yEstimado, 2);
+}
+
+let r2 = 1 - sqRes / sqTotal;
+
+console.log("Equação da reta: y = " + a.toFixed(2) + "x + " + b.toFixed(2));
+console.log("R² = " + r2.toFixed(4));
+
+//Previsões para os próximos 3 meses
+let futurosX = [5, 6, 7];
+
+console.log("\nPrevisões:");
+
+for (let i = 0; i < futurosX.length; i++) {
+  let xFuturo = futurosX[i];
+  let yPrevisto = a * xFuturo + b;
+
+  console.log(
+    "Mês " + xFuturo + ": " + yPrevisto.toFixed(2)
+  );
+}
+RESULTADO:
+Equação da reta: y = 90.00x + 540.00
+R² = 1.0000
+
+Previsões:
+Mês 5: 1710.00
+Mês 6: 1800.00
+Mês 7: 1890.00
+
+=== Code Execution Successful ===
+/----------------------------------------------------/
+TINTA SPRAY
+CÓDIGO:
+let x = [ 
+    1,2,3,4
+];
+
+let y = [
+ 195,255,300,360
+];
+
+let n = x.length;
+
+let somaX = 0;
+let somaY = 0;
+let somaXY = 0;
+let somaX2 = 0;
+
+for (let i = 0; i < n; i++) {
+  somaX += x[i];
+  somaY += y[i];
+  somaXY += x[i] * y[i];
+  somaX2 += x[i] * x[i];
+}
+
+let a = (n * somaXY - somaX * somaY) / (n * somaX2 - somaX * somaX);
+let b = (somaY - a * somaX) / n;
+
+let mediaY = somaY / n;
+
+let sqTotal = 0;
+let sqRes = 0;
+
+for (let i = 0; i < n; i++) {
+  let yEstimado = a * x[i] + b;
+
+  sqTotal += Math.pow(y[i] - mediaY, 2);
+  sqRes += Math.pow(y[i] - yEstimado, 2);
+}
+
+let r2 = 1 - sqRes / sqTotal;
+
+console.log("Equação da reta: y = " + a.toFixed(2) + "x + " + b.toFixed(2));
+console.log("R² = " + r2.toFixed(4));
+
+//Previsões para os próximos 3 meses
+let futurosX = [5, 6, 7];
+
+console.log("\nPrevisões:");
+
+for (let i = 0; i < futurosX.length; i++) {
+  let xFuturo = futurosX[i];
+  let yPrevisto = a * xFuturo + b;
+
+  console.log(
+    "Mês " + xFuturo + ": " + yPrevisto.toFixed(2)
+  );
+}
+RESULTADO:
+Equação da reta: y = 54.00x + 142.50
+R² = 0.9969
+
+Previsões:
+Mês 5: 844.50
+Mês 6: 898.50
+Mês 7: 952.50
+
+=== Code Execution Successful ===
+/----------------------------------------------------/
+TINTA PVA:
+CÓDIGO:
+let x = [ 
+    1
+];
+
+let y = [
+  310
+];
+
+let n = x.length;
+
+let somaX = 0;
+let somaY = 0;
+let somaXY = 0;
+let somaX2 = 0;
+
+for (let i = 0; i < n; i++) {
+  somaX += x[i];
+  somaY += y[i];
+  somaXY += x[i] * y[i];
+  somaX2 += x[i] * x[i];
+}
+
+let a = (n * somaXY - somaX * somaY) / (n * somaX2 - somaX * somaX);
+let b = (somaY - a * somaX) / n;
+
+let mediaY = somaY / n;
+
+let sqTotal = 0;
+let sqRes = 0;
+
+for (let i = 0; i < n; i++) {
+  let yEstimado = a * x[i] + b;
+
+  sqTotal += Math.pow(y[i] - mediaY, 2);
+  sqRes += Math.pow(y[i] - yEstimado, 2);
+}
+
+let r2 = 1 - sqRes / sqTotal;
+
+console.log("Equação da reta: y = " + a.toFixed(2) + "x + " + b.toFixed(2));
+console.log("R² = " + r2.toFixed(4));
+
+//Previsões para os próximos 3 meses
+let futurosX = [2, 3, 4];
+
+console.log("\nPrevisões:");
+
+for (let i = 0; i < futurosX.length; i++) {
+  let xFuturo = futurosX[i];
+  let yPrevisto = a * xFuturo + b;
+
+  console.log(
+    "Mês " + xFuturo + ": " + yPrevisto.toFixed(2)
+  );
+}
+RESULTADO:
+Equação da reta: y = NaNx + NaN
+R² = NaN
+
+Previsões:
+Mês 2: NaN
+Mês 3: NaN
+Mês 4: NaN
+
+=== Code Execution Successful ===
